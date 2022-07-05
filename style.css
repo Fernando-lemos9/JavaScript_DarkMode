@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: rgb(255, 251, 251);
+  --fc-bg: #02799D;
+  --color-text: rgb(29, 28, 28);
+  --color-button: rgb(29, 28, 28);
+  --color-icon:  rgb(29, 28, 28);
+  --color-card: #E1E1E6;
+  --dark: #29292E;
+  
+
+  --ff-text: 'Roboto', sans-serif;
+  --fs-text: 12.6rem;
+
+
+  font-size: 62,5%
+}
+
+
+body{
+  background: var(--bg);
+  
+  font-family: var(--ff-text);
+  
+}
+
+.page{
+
+  display: grid;
+  min-height: 100vh;
+  align-content: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+}
+
+#displaycontrols{
+
+  margin-right:19.2rem; 
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  justify-content: center;
+
+}
+
+#time{
+  display: flex;
+  color: var(--color-text);
+  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+  
+}
+
+#controls{
+  display: flex;
+  
+  width: clamp(10rem, 10rem + 30vw, 22.8rem);
+  height: clamp(8rem, 5rem +10vw, 10.8rem);
+
+  justify-content: space-between;
+
+}
+
+#controls button{
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0;
+
+  border: none;
+  cursor: pointer;
+}
+
+#controls button svg path{
+  fill: var(--color-button);
+}
+
+#sons button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#sons button svg {
+  position: relative;
+  width: clamp(2.8rem, 1rem + 48vw, 8.4rem);
+  /* padding: 1rem; */
+}
+
+.hide{
+  display: none;
+}
+
+.select svg path{
+  fill: var(--fc-bg)
+
+}
+
+.select svg path + path{
+  fill: var(--color-icon)
+}
+
+
+.select.dark svg path{
+  fill: #0A3442
+}
+
+.select.dark svg path + path{
+  fill: white
+}
+
+.dark svg path{
+  fill: var(--dark)
+}
+
+.dark svg path + path{
+  fill: #C4C4CC
+}
+
+
+#sons input  {
+  position: absolute;
+  display: flex;
+  align-self: center;
+  margin-bottom: 1.4rem ;
+  
+
+  width: 7rem;
+
+}
+
+#sons{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem
+}
+
+
+.mode {
+  position: relative;
+  display: flex;
+  justify-content: end;
+
+  margin: 64px 64px;
+}
+
+#switch {
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  /* background-color: transparent; */
+
+  opacity: 0;
+}
